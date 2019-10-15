@@ -1660,6 +1660,69 @@ Setting.create_if_not_exists(
 )
 
 Setting.create_if_not_exists(
+  title:       'Authentication via %s',
+  name:        'auth_slack',
+  area:        'Security::ThirdPartyAuthentication',
+  description: 'Enables user authentication via %s. Register your app first at [%s](%s).',
+  options:     {
+    form: [
+      {
+        display: '',
+        null:    true,
+        name:    'auth_slack',
+        tag:     'boolean',
+        options: {
+          true  => 'yes',
+          false => 'no',
+        },
+      },
+    ],
+  },
+  preferences: {
+    controller:       'SettingsAreaSwitch',
+    sub:              ['auth_slack_credentials'],
+    title_i18n:       ['slack'],
+    description_i18n: ['Slack', 'Slack API', 'https://api.slack.com/apps'],
+    permission:       ['admin.security'],
+  },
+  state:       false,
+  frontend:    true
+)
+Setting.create_if_not_exists(
+  title:       'Slack App Credentials',
+  name:        'auth_slack_credentials',
+  area:        'Security::ThirdPartyAuthentication::Slack',
+  description: 'Enables user authentication via Slack.',
+  options:     {
+    form: [
+      {
+        display: 'API Key',
+        null:    true,
+        name:    'api_key',
+        tag:     'input',
+      },
+      {
+        display: 'API Secret',
+        null:    true,
+        name:    'api_secret',
+        tag:     'input',
+      },
+      {
+        display: 'Scopes (comma separated)',
+        null:    true,
+        name:    'scope',
+        tag:     'input',
+      },
+    ],
+  },
+  state:       {},
+  preferences: {
+    permission: ['admin.security'],
+  },
+  frontend:    false
+)
+
+Setting.create_if_not_exists(
   title:       'Minimum length',
   name:        'password_min_size',
   area:        'Security::Password',

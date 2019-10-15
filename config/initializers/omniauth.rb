@@ -49,6 +49,9 @@ Rails.application.config.middleware.use OmniAuth::Builder do
   # weibo database connect
   provider :weibo_database, 'not_change_will_be_set_by_database', 'not_change_will_be_set_by_database'
 
+  # slack database connect
+  provider :slack_database, 'not_change_will_be_set_by_database', 'not_change_will_be_set_by_database', scope: 'not_change_will_be_set_by_database', name: :sign_in_with_slack
+
 end
 
 # This fixes issue #1642 and is required for setups in which Zammad is used

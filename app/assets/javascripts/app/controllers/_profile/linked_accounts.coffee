@@ -106,4 +106,9 @@ App.Config.set('auth_provider_all', {
     name:   'Weibo'
     config: 'auth_weibo'
     class:  'weibo'
+  slack:
+    url:    '/auth/slack'
+    name:   'Slack'
+    config: 'auth_slack'
+    class:  'slack'
 })
