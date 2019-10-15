@@ -2,19 +2,6 @@ class Internal
   @action: (actions, ticket, article, ui) ->
     return actions if ui.permissionCheck('ticket.customer')
 
-    if article.internal is true
-      actions.push {
-        name: 'set to public'
-        type: 'public'
-        icon: 'lock-open'
-      }
-    else
-      actions.push {
-        name: 'set to internal'
-        type: 'internal'
-        icon: 'lock'
-      }
-
     actions
 
   @perform: (articleContainer, type, ticket, article, ui) ->
