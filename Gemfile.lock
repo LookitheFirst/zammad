@@ -202,6 +202,8 @@ GEM
       ffi (>= 1.0.0)
       rake
     formatador (0.2.5)
+    ginjo-omniauth-slack (2.4.1)
+      omniauth-oauth2 (>= 1.4.0)
     github_changelog_generator (1.14.3)
       activesupport
       faraday-http-cache
@@ -583,6 +585,7 @@ DEPENDENCIES
   execjs
   factory_bot_rails
   faker
+  ginjo-omniauth-slack
   github_changelog_generator
   guard
   guard-livereload

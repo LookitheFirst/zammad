@@ -76,6 +76,7 @@ gem 'omniauth-microsoft-office365'
 gem 'omniauth-oauth2'
 gem 'omniauth-twitter'
 gem 'omniauth-weibo-oauth2'
+gem 'ginjo-omniauth-slack'
 
 # channels
 gem 'koala'
