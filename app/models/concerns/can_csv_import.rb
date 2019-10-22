@@ -325,10 +325,10 @@ returns
     def csv_example(params = {})
       header = []
       csv_object_ids_ignored = @csv_object_ids_ignored || []
-      records = where.not(id: csv_object_ids_ignored).offset(1).limit(23).to_a
-      if records.count < 20
+      records = where.not(id: csv_object_ids_ignored).offset(1).limit(1000).to_a
+      if records.count < 997
         record_ids = records.pluck(:id).concat(csv_object_ids_ignored)
-        local_records = where.not(id: record_ids).limit(20 - records.count)
+        local_records = where.not(id: record_ids).limit(997 - records.count)
         records = records.concat(local_records)
       end
       records_attributes_with_association_names = []
