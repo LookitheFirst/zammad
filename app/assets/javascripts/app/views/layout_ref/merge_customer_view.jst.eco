@@ -421,10 +421,6 @@
                 <div class="editControls-icon pop-selectable js-articleTypeItem" data-value="phone"></div>
               </div>
             </div>
-
-            <div class="editControls-item is-hidden js-toggleVisibility">
-              <div class="editControls-iconHolder"></div>
-            </div>
           </div>
 
           <div class="article-content bubble-gap">

@@ -399,16 +399,6 @@
               </div>
             </div>
           </div>
-          <div class="editControls-item is-hidden js-toggleVisibility">
-            <div class="editControls-iconHolder">
-              <div class="editControls-icon icon-internal" title="set to public">
-                <%- @Icon('lock', '') %>
-              </div>
-              <div class="editControls-icon icon-public" title="set to internal">
-                <%- @Icon('lock-open', '') %>
-              </div>
-            </div>
-          </div>
         </div>
         <div class="article-content bubble-gap">
           <div class="internal-border">

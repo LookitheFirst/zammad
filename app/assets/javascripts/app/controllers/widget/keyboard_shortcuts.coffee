@@ -357,15 +357,6 @@ App.Config.set(
                   return
                 lastArticleWithReply.click()
             }
-            {
-              key: 'j'
-              hotkeys: true
-              description: 'Set article to internal/public'
-              globalEvent: 'article-internal-public'
-              callback: ->
-                App.Event.trigger('keyboard_shortcuts_close')
-                $('.active.content .editControls .js-selectInternalPublic').click()
-            }
             #{
             #  key: 'm'
             #  hotkeys: true
