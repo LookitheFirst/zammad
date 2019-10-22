@@ -86,7 +86,7 @@ module Zammad
                 no:              false,
               },
               channel:  {
-                email:  true,
+                email:  false,
                 online: true,
               }
             },
